@@ -19,3 +19,14 @@ const monologueLines = [
 
 
 const totalBatteries=batteryBatches.reduce((total,batch)=>total+batch,0);
+
+const wordCountMap=monologueLines.reduce((map,sentence)=>{
+  const wordCount=sentence.split(' ').length;
+  if(!map[wordCount]) {
+    map[wordCount]=0;
+  }
+
+  map[wordCount]++;
+
+  return map;
+})
