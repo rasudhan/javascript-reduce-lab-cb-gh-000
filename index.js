@@ -18,4 +18,4 @@ const monologueLines = [
 ];
 
 
-const totalBatteries=batteryBatches.reduce();
+const totalBatteries=batteryBatches.reduce((total,batch)=>total+batch,0);
